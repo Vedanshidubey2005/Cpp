@@ -1,0 +1,58 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+// char ch;
+// cin>>ch;
+// if(ch>=48&&ch<=57){
+//     cout<<"Numbers"<<endl;
+// }
+// else if(ch>=97&&ch<=122){
+//     cout<<"Lower Case"<<endl;
+// }
+// else if(ch>=65&&ch<=90){
+//     cout<<"Upper Case"<<endl;
+// }
+// else{
+//     cout<<"other";
+// }
+// op:@
+// other
+// u
+// I
+// Upper Case
+// 7
+// Numbers
+int a;
+cin>>a;
+
+if(a<18){
+    cout<<"Not eligible "<<endl;
+}
+else if(a<=57){
+    cout<<"Eligible"<<endl;
+    if(a>=55){
+        cout<<"Retiring soon"<<endl;
+    }
+}
+else{
+    cout<<"Retirement"<<endl;
+}
+cout<<"Thanks for entering age";
+// op:
+// 56
+// Eligible
+// Retiring soon
+// Thanks for entering age
+// 45
+// Eligible
+// Thanks for entering age
+// 59
+// Retirement
+// Thanks for entering age
+// 15
+// Not eligible 
+// Thanks for entering age
+    return 0;
+}
