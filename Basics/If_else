@@ -1,0 +1,43 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+  
+// int a=9;
+// if(a=9){
+//     cout<<"Niney"<<endl;
+// }
+// if(a>0){
+//     cout<<"p"<<endl;
+// }
+// else{
+//     cout<<"n"<<endl;
+// }
+// op:Niney
+// p
+// int a =2;
+// int b=a+1;
+// if((a=3)==b){
+//     cout<<a;
+// }
+// else{
+//     cout<<a+2;
+// }
+// op:3
+// int a=24;
+// if(a>0){
+//     cout<<"I"<<endl;
+// }
+// else if(a==24){
+//     cout<<"Am"<<endl;
+// }
+// else{
+//     cout<<"Good"<<endl;
+// }
+// cout<<a;
+// op:I
+// 24
+
+    return 0;
+}
