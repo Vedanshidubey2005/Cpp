@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+  int a=1;
+  while(a<=6){
+      cout<<"You are a good person"<<endl;
+      a+=1;
+  }
+//   op:
+//   You are a good person
+// You are a good person
+// You are a good person
+// You are a good person
+// You are a good person
+// You are a good person
+int n;
+cin>>n;
+int s=0;
+int i=1;
+while(i<=n){
+    s=s+i;
+    i+=1;
+} 
+cout<<"Sum from "<< 1 <<" "<< "to"<<" "<<n<<" "<< " "<<s;
+// op :
+// 5
+// Sum from 1 to 5  15
+
+    return 0;
+}
