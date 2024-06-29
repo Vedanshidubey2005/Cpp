@@ -1,0 +1,144 @@
+#include<iostream>
+using namespace std;
+void p1(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i+1;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+// op:2
+// 5
+// 1 2 3 4 5 
+// 1 2 3 4
+// 1 2 3
+// 1 2
+// 1
+// 4
+// 1 2 3 4 
+// 1 2 3
+// 1 2
+// 1
+}
+void p2(int n){
+    for(int  i=1;i<=n;i++){
+        //spaces
+        for(int j=1;j<=n-i;j++){
+            cout<<" ";
+        }
+        //numbers
+       for(int j=1;j<=i;j++){
+            cout<< j;
+        } 
+        cout<<endl;
+    }
+// op:1
+// 5
+//     1
+//    12
+//   123
+//  1234
+// 12345
+}
+void p3(int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            cout<<" ";
+        }
+         for(int j=1;j<=n-i;j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+// op:  1
+// 5
+// 12345
+//  1234
+//   123
+//    12
+//     1
+
+}
+void p4(int n){
+    for(int i=0;i<n;i++){
+      for(int j=0;j<i;j++){
+          cout<<" ";
+      }
+      for(int j=0;j<n-i;j++){
+          cout<< n-i; 
+      }
+      cout<<endl;
+  }
+// op:  1
+// 5
+// 55555
+//  4444
+//   333
+//    22
+//     1
+
+}
+void p5(int n){
+    for(int i=0;i<n;i++){
+      for(int j=0;j<i;j++){
+          cout<<" ";
+      }
+      for(int j=0;j<n-i;j++){
+          cout<< n-(i+j); 
+      }
+      cout<<endl;
+    }
+// op:1
+// 5
+// 54321
+//  4321
+//   321
+//    21
+//     1
+    
+}
+void p6(int n){
+    for(int i=0;i<n;i++){
+      for(int j=0;j<n-i;j++){
+          cout<<" ";
+      }
+      for(int j=0;j<=i;j++){
+          cout<<n-i; 
+      }
+   cout<<endl;
+    }
+//     op:1
+// 5
+//      5
+//     44
+//    333
+//   2222
+//  11111
+}
+void p7(int n){
+    for(int i=1;i<=n;i++){
+    
+      for(int j=0;j<=n-i;j++){
+          cout<< i; 
+      }
+    cout<<endl;
+    }
+//  op;   1
+// 5
+// 11111
+// 2222
+// 333
+// 44
+// 5
+}
+int main()
+{
+ int t;
+ cin>>t;
+for(int i=0;i<t;i++){
+int n;
+cin>>n;
+p7(n);
+}
+
+} 
