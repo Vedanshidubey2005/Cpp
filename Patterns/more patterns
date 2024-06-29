@@ -1,0 +1,335 @@
+#include<iostream>
+using namespace std;
+void p12345(int n){
+ for(int i=0;i<n;i++)  {
+    for(int j=1;j<=n;j++){
+        cout<<j;
+    }
+    cout<<endl;
+ } 
+//  5
+// 12345
+// 12345
+// 12345
+// 12345
+// 12345
+}
+void p1234(int n){
+//   for(int i=1;i<=n;i++)  {
+//     for(int j=1;j<=n;j++){
+//         cout<<n-j+1;
+//     }
+//     cout<<endl;
+//  }   
+int i=1;
+while(i<=n){
+  int j=1;
+  while(j<=n){
+    cout<< n-j+1;
+    j=j+1;
+  }
+  i=i+1;
+  cout<<endl;
+}
+// 3
+// 5
+// 54321
+// 54321
+// 54321
+// 54321
+// 54321
+// 6
+// 654321
+// 654321
+// 654321
+// 654321
+// 654321
+// 654321
+// 4
+// 4321
+// 4321
+// 4321
+// 4321
+}
+void p123(int n){
+  int i=1;
+  while(i<=n){
+    int j=1;
+    while(j<=n){
+    cout<<"*";
+    j=j+1;
+  }
+  i=i+1;
+   cout<<endl;
+  }
+//   5
+// *****
+// *****
+// *****
+// *****
+// *****
+// 3
+// ***
+// ***
+// ***
+// 4
+// ****
+// ****
+// ****
+// ****
+}
+void p12(int n){
+  int i=1;
+  int num=1;
+  while(i<=n){
+    int j=1;
+    while(j<=i){
+      cout<<num;
+      num++;
+      j++;
+    }
+    i++;
+    cout<<endl;
+  }
+//   4
+// 3
+// 1
+// 23
+// 456
+// 6
+// 1
+// 23
+// 456
+// 78910
+// 1112131415
+// 161718192021
+// 5
+// 1
+// 23
+// 456
+// 78910
+// 1112131415
+// 4
+// 1
+// 23
+// 456
+// 78910
+}
+void p1(int n){
+  int i=1;
+  int num=1;
+  while(i<=n){
+    int j=1;
+    while(j<=n){
+      cout<< num;
+      j=j+1;
+      num=num+1;
+    }
+    
+    i=i+1;
+   cout<<endl;
+  }
+  // 2
+// 3
+// 123
+// 456
+// 789
+// 2
+// 12
+// 34
+}
+void p21(int n){
+  int i=1;
+  
+  while(i<=n){
+    int val=i;
+    int j=1;
+    while(j<=i){
+      cout<< val;
+      j=j+1;
+      val++;
+    }
+    i=i+1;
+    cout<<endl;
+  }
+//   3
+// 4
+// 1
+// 23
+// 345
+// 4567
+// 5
+// 1
+// 23
+// 345
+// 4567
+// 56789
+// 3
+// 1
+// 23
+// 345
+}
+void p321(int n){
+  for(int i=1;i<=n;i++){
+    int num= i;
+    for(int j=1;j<=i;j++){
+      // cout<< num;
+      cout<< i-j+1;
+      // num=num-1;
+    }
+    cout<<endl;
+  }
+//   3
+// 3
+// 1
+// 21
+// 321
+// 4
+// 1
+// 21
+// 321
+// 4321
+// 5
+// 1
+// 21
+// 321
+// 4321
+// 54321
+}
+void p4321(int n){
+  for(int i=1;i<=n;i++){
+    for(char ch='A';ch<='A'+i;ch++){
+      cout<< ch<<" ";
+    }
+    cout<<endl;
+  }
+//   1
+// 5
+// A B 
+// A B C
+// A B C D
+// A B C D E
+// A B C D E F
+}
+void p567(int n){
+   for(int i=1;i<=n;i++){
+    for(char ch='A';ch<='A'+n;ch++){
+      
+      cout<< ch <<" ";
+    }
+    cout<<endl;
+  }
+//   1
+// 5
+// A B C D E F 
+// A B C D E F
+// A B C D E F
+// A B C D E F
+// A B C D E F
+}
+void p675(int n){
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=n;j++){
+      char cf= 'A'+i-1;
+      cout<< cf <<" ";
+    }
+    cout<<endl;
+  }
+//   1
+// 5
+// A A A A A 
+// B B B B B 
+// C C C C C
+// D D D D D
+// E E E E E
+}
+void p756(int n){
+   char ch='A';
+  for(int i=1;i<=n;i++){
+   
+    for(int j=1;j<=n;j++){
+      cout<< ch <<" ";
+      ch=ch+1;
+    }
+    cout<<endl;
+  }
+//   2
+// 3
+// A B C 
+// D E F
+// G H I
+// 5
+// A B C D E 
+// F G H I J
+// K L M N O
+// P Q R S T 
+// U V W X Y
+}
+void p111(int n){
+  char ch='A';
+  for(int i=1;i<=n;i++){
+   char cf=ch;
+    for(int j=1;j<=n;j++){
+      cout<< cf <<" ";
+      cf=cf+1;
+    }
+    ch=ch+1;
+    cout<<endl;
+//     2
+// 3
+// A B C 
+// B C D
+// C D E
+// 4
+// A B C D 
+// B C D E
+// C D E F
+// D E F G
+}
+}
+void p222(int n){
+  char ch='A';
+  for(int i=0;i<n;i++){
+    for(int j=0;j<=i;j++){
+      cout<< ch <<" ";
+    }
+    ch=ch+1;
+    cout<<endl;
+  }
+//   1
+// 5
+// A 
+// B B
+// C C C
+// D D D D
+// E E E E E
+}
+void p333(int n){
+   char ch='A';
+  for(int i=1;i<=n;i++){
+   
+    for(int j=1;j<=i;j++){
+      cout<< ch <<" ";
+      ch=ch+1;
+    }
+    cout<<endl;
+  }
+//   1
+// 5
+// A 
+// B C
+// D E F
+// G H I J
+// K L M N O
+}
+int main()
+{
+ int t;
+ cin>>t;
+for(int i=0;i<t;i++){
+int n;
+cin>>n;
+p333(n);
+}
+
+} 
