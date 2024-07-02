@@ -1,0 +1,48 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+void  showdq(deque<int>dq){
+    //iterator same as vector
+    for(auto it: dq){
+        cout<<it<<" ";
+    }
+}
+int main() {
+   //DEQUE
+   deque<int>d={1,3,5,7,9};
+   showdq(d);  //1 3 5 7 9 
+   cout<<endl;
+   
+   deque<int>d1{12,43,54,54};
+   showdq(d1); //12 43 54 54
+   cout<<endl;
+   
+   deque<int>d2;
+   d2.push_back(3);
+   d2.push_back(13);
+   d2.push_front(23);
+   d2.emplace_back(36);
+   d2.emplace_front(32);
+   showdq(d2);   //32 23 3 13 36 
+   cout<<endl;
+   
+   cout<< d1.front()<<endl;  //12
+   cout<<d1.back()<<endl;   //54
+   
+   d2.pop_front();
+   d2.pop_back();
+   showdq(d2);  // 23 3 13
+   cout<<endl;
+   
+   cout<<d1.empty()<<endl;   //0
+   d2.clear();
+   cout<< d2.empty()<<endl;        //1
+   
+   cout<<d1.size()<<" "<<d.size()<<" "<<d2.size()<<endl;   // 4 5 0
+   
+// Accessing Elements- O(1)
+// Insertion or removal of elements- O(N)
+// Insertion or removal of elements at start or end- O(1)
+    return 0;
+}
