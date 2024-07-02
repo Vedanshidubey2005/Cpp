@@ -1,0 +1,73 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+  //STACK
+  stack<int> st;
+  st.push(5);
+  st.push(25);
+  st.push(35);
+  st.emplace(5);
+  
+  cout<<st.top()<<endl;  //5
+  st.pop();
+  cout<<st.top()<<endl;    //35
+  
+  cout<<st.empty()<<endl;   //0
+  cout<<st.size()<<endl;    //3
+  
+  //swap
+  stack<int>s1,s2;
+  s1.swap(s2);
+  
+  //QUEUE
+  queue<int>q;
+  q.push(56);
+  q.push(61);
+  q.push(62);
+  q.emplace(26);
+  
+  cout<<q.back()<<endl;  //26
+  q.back()+=100;
+  cout<<q.back()<<endl;  //126
+  cout<<q.front()<<endl;  //56
+  q.pop();
+  cout<<q.back()<<endl;   //126
+  cout<<q.front()<<endl;  //61
+  cout<<q.empty()<<endl;  //0
+  cout<<q.size()<<endl;   //3
+  
+  //swap
+  queue<int>q1,q2;
+  q1.swap(q2);
+  
+  
+  //PRIORITY QUEUE
+  //tree is maintained
+  // max element is at top
+     
+     priority_queue<int>pq;
+     pq.push(6);
+      pq.emplace(42);
+   pq.push(16);
+   pq.push(66);
+    cout<<pq.top()<<endl; //66
+    cout<<pq.size()<<endl; //4
+    pq.pop();
+    cout<<pq.top()<<endl;  //42
+    cout<<pq.empty()<<endl;  //0
+    
+    //for min element to be at top --> min heap
+    priority_queue<int, vector<int>,greater <int>> p;
+     p.push(6);
+      p.emplace(42);
+   p.push(1);
+   p.push(66);
+   cout<<p.top()<<endl;   //1
+   p.pop();
+   cout<<p.top()<<endl;   //6
+  
+    return 0;
+}
