@@ -1,0 +1,96 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    // SETS
+    // elements are stored in sorted order and also are unique
+    set<int>st;
+     //insert and emplace
+     
+     st.insert(4);
+     st.emplace(2);
+     st.insert(5);
+     st.emplace(1);
+     
+     for(auto i: st){
+         cout<<i<<" ";
+     }    //1 2 4 5 
+   cout<<endl;
+   // it returns iterator pointing at 5
+   auto it=st.find(5);
+   st.erase(it);
+   //st.erase(5);
+    for(auto i: st){
+         cout<<i<<" ";
+     }    //1 2 4 
+   cout<<endl;;
+   
+   int c= st.count(4);
+   cout<<c<<endl;  //1
+   int c1= st.count(5);
+   cout<<c1<<endl;  // 0
+   
+   //lower and upper bound
+   auto i1=st.upper_bound(2);  // returns just greater element
+   cout<<*i1<<endl;   //4
+    auto i2=st.lower_bound(2);
+   cout<<*i2<<endl;    //2
+   
+   
+   //MULTI-SETS
+   //multiple occurences of a single element
+   //sorted order
+   
+   multiset<int> ms;
+   ms.insert(1);
+   ms.insert(1);
+      ms.emplace(1);
+   ms.insert(12);
+    ms.insert(92);
+     ms.insert(2);
+      ms.insert(1);
+      ms.insert(2);
+      for(auto i:ms){
+          cout<<i<<" ";
+      }          //1 1 1 1 2 2 12 92 
+
+      cout<<endl;
+      
+      //delete all occuremces of 1
+      ms.erase(1);
+      for(auto i:ms){
+          cout<<i<<" ";
+      }          //2 2 12 92 
+
+      cout<<endl;
+      
+      //delete single 2
+      ms.erase(ms.find(2));
+      for(auto i:ms){
+          cout<<i<<" ";
+      }          // 2 12 92 
+      cout<<endl;
+      ms.insert(2);
+      //count
+      cout<<ms.count(2)<<endl;  //2
+      
+      //rest functions are same as set
+      
+      //UNORDERED SETS
+      
+      //does not store in particular order
+      //upper and lower bound can't be used
+      //unique elements
+      
+      unordered_set<int>us;
+      us.insert(4);
+       us.insert(24);
+        us.insert(4);
+         us.insert(3);
+         for(auto i: us){
+             cout<<i<<" ";
+         }    // 3 24 4
+         cout<<endl;
+    return 0;
+}
