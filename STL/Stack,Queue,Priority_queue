@@ -5,6 +5,8 @@ using namespace std;
 
 int main() {
   //STACK
+
+//LIFO
   stack<int> st;
   st.push(5);
   st.push(25);
@@ -23,6 +25,7 @@ int main() {
   s1.swap(s2);
   
   //QUEUE
+//FIFO
   queue<int>q;
   q.push(56);
   q.push(61);
