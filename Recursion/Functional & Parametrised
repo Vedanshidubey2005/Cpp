@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int f3(int i,int sum){
+    if(i<1){
+        cout<<sum<<endl;
+        return 0;
+    }
+    f3(i-1,sum+i);
+}
+int f4(int n){
+    if(n==0) return 0;
+    return f4(n-1)+n;
+}
+int main() {
+   
+   //parameteised way 
+   int n;
+   cin>>n;
+//    f3(n,0);
+//    op:6
+// 21
+
+//functional way
+    f4(n);  //we have to print the sum
+    int sum =f4(n);
+    cout<<"The sum is:" <<sum <<endl;
+//     op:6
+// The sum is:21
+    return 0;
+}
