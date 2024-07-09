@@ -11,6 +11,10 @@ int f4(int n){
     if(n==0) return 0;
     return f4(n-1)+n;
 }
+int f5(int n){
+    if(n==0) return 1;
+    return n*f5(n-1);
+}
 int main() {
    
    //parameteised way 
@@ -26,5 +30,10 @@ int main() {
     cout<<"The sum is:" <<sum <<endl;
 //     op:6
 // The sum is:21
+ int fact =f5(n);
+ cout<<"The factorial of "<< n << " is : "<<fact<<endl;
+//  op:6
+// The sum is:21
+// The factorial of 6 is : 720
     return 0;
 }
