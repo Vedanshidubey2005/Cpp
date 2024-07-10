@@ -1,0 +1,35 @@
+// Number of 1 bits
+class Solution {
+public:
+    int hammingWeight(int n) {
+        int count=0;
+       while(n!=0){
+            if(n&1){
+                count++;
+            }
+         n=   n>>1;
+        }
+        return count;
+    }
+};
+
+//Reverse Integer
+class Solution {
+public:
+    int reverse(int x) {
+        
+       int rev=0;
+        
+        while(x!=0){
+            int l = x%10;
+            if(rev> INT_MAX/10 || rev<INT_MIN/10){
+           return 0 ;
+        }
+             rev= (rev*10)+l;
+            x=x/10;
+        }
+       
+        return rev;
+    }
+    
+};
