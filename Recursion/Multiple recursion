@@ -1,0 +1,20 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int fibn(int n){
+    if(n<=1)  
+    return n;
+    
+    int last= fibn(n-1);
+    int slast=fibn(n-2);
+    
+    return last+slast;
+}
+int main() {
+  int n;
+  cin>>n;
+  cout<<n<<"th fibonacci number is:"<<fibn(n);
+// 4
+// 4th fibonacci number is:3
+    return 0;
+}
