@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int nthterm(){
+    int n;
+cin>>n;
+cout<< n << " th term is  :";
+    return 3*n+7;
+}
+int main() {
+
+
+cout<< nthterm();
+cout<< nthterm();
+
+
+// 2
+// 2 th term is  :13
+// 3
+// 3 th term is  :16
+// 5
+// 5 th term is  :22
+    return 0;
+}
