@@ -1,0 +1,49 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+ //Hashing --> prestoring/fetching
+ //It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key.
+ 
+ int n;
+ cin>>n;
+ int arr[n];
+ cout<<"Enter array elements"<<endl;
+ for(int i=0;i<n;i++){
+     cin >> arr[i] ;
+ }
+ //precompute
+ int hash[13] ={0};
+ for(int i=0;i<n;i++){
+     hash[arr[i]]++;
+ }
+// queries
+cout<<"Enter no. of times you want to check occurence"<<endl;
+int q;
+cin >> q;
+while(q--){
+    //occurence of which number we have to find
+    int num;
+    cin >> num;
+    cout<< hash[num]<< endl;
+}
+// 5
+// Enter array elements
+// 2 3 1 2 3
+// Enter no. of times you want to check occurence
+// 5
+// 1
+// 1
+// 2
+// 2
+// 3
+// 2
+// 4
+// 0
+// 2
+// 2
+
+//here as you can see we have taken hash array of max size 13 because it is the maximum value it can store but in case we have to store larger values we can use maps
+    return 0;
+}
