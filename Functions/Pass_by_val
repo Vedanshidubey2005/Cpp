@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+//PASS BY VALUE
+int passbyv(int x, int y){
+    x++;
+    y++;
+    cout<< "Inside function :"<<endl;
+    cout << x <<" " << y << endl ;
+     return x*y;
+}
+int main() {
+  int x,y;
+  cin >> x >> y;
+cout <<  passbyv(x,y)<< endl;
+cout<< "After function calling :";
+  cout<< x*y;
+  
+  //output
+//   4 6 
+// Inside function :
+// 5 7
+// 35
+// After function calling :24
+    return 0;
+}
