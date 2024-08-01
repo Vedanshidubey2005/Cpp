@@ -59,3 +59,13 @@ return 0;
 
 // Enter Length And Breadth Of Rectangle:6 8
 // Area = 48
+// Welcome, See the choices !! 
+// 1.Area Of Circle
+// 2.Area Of Rectangle
+// 3.Area Of Triangle
+// 4.Area Of Square
+
+// Enter Your Choice :1
+
+// Enter Radius Of The Circle: 8.9
+// Area = 248.719
