@@ -1,0 +1,44 @@
+//
+// #include <bits/stdc++.h> 
+// int largestElement(vector<int> &arr, int n) {
+//     // Write your code here.
+//     int max= arr[0];
+//     for(int i=0;i<n;i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//     }
+//     return max;
+// }
+
+#include <iostream>
+using namespace std;
+
+void printArray(int arr[],int size){
+      for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    } 
+    cout<<"<--Array printed "<<endl;
+}
+int main() {
+    
+    int arr[4];
+   
+    for(int i=0;i<4;i++){
+        cin>> arr[i];
+    }
+    printArray(arr,4);
+    //LARGEST ELEMENT IN AN ARRAY
+   int max=arr[0];
+    for(int i=0;i<4;i++){
+        if(arr[i]>max){
+            max=arr[i+1];
+    }
+    }
+cout<<"Largest element:"<<max;
+
+//34 68 974 3 
+// 34 68 974 3 <--Array printed 
+// Largest element:974
+return 0;
+}
