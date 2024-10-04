@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    //ARRAYS
+    //a data structure used to store similar type of elements
+    
+    //DECLARING AN ARRAY
+    int arr[4];
+    cout<< arr[1]<<endl;  
+    //32766   some garbage value
+    //entering array elements
+    for(int i=0;i<4;i++){
+        cin>> arr[i];
+    }
+    //accessing aaray elements
+     for(int i=0;i<4;i++){
+        cout<<arr[i]<<" ";
+    }  //3 5 7 8 
+    cout<<endl;
+    int arr2[10]={0};
+    for(int i=0;i<4;i++){
+        cout<<arr2[i]<<" ";
+    }
+   //0 0 0 0
+   cout<<endl;
+   //Initialising an array
+   int num[4]={34,65,234,56};
+   cout<<num[5]<<endl; //0
+   cout<<num[3]<<endl; //56
+   
+   int num2[45]={223,65,7};
+   for(int i=0;i<45;i++){
+        cout<<num[i]<<" ";
+    }
+    //34 65 234 56 0 0 0 0 0 0 0 0 0 0 0 0 4 6 7 3 20 4 4 4 4199344 0 1349246218 32226 629765064 32767 4543 1 4198806 0 1354076112 32226 0 0 -2129078357 1721507234 4198576 0 0 0 0 
+    return 0;
+}
