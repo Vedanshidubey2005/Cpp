@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+// void reverse(int arr[],int sat,int end){
+//     while(start<=end){
+//         int temp= arr[start];
+//         arr[start]=arr[end];
+//         arr[end]=temp;
+//         star++;
+//         end--;
+//     }
+// }
+
+void rotateArray(int arr[], int d,int n) {
+  reverse(arr,arr+d);
+  reverse(arr+d,arr+n);
+  reverse(arr,arr+n);
+}
+int main(){
+    int n;
+    cout<<"Enter array size :";
+    cin>>n;
+    int k;
+    cout<<"Enter the places to be rotated :";
+    cin>>k;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>> arr[i];
+    }
+    //ROTATE ARRAY BY K PLACES OPTIMAL APPROACH
+    rotateArray(arr,k,n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    } 
+    cout<<"<--Array printed "<<endl;
+    
+// Enter array size :5
+// Enter the places to be rotated :4
+// 11 12 13 14 15
+// 15 11 12 13 14 <--Array printed 
+
+    return 0;
+}
