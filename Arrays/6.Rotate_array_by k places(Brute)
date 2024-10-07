@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+void rotateArray(int arr[], int k,int n) {
+    k=k%n;
+   int temp[k];
+   for(int i=0;i<k;i++){
+      temp[i]=arr[i];
+   }
+
+   for(int i=k;i<n;i++){
+       arr[i-k]=arr[i];
+   }
+
+   for(int i=n-k;i<n;i++){
+       arr[i]=temp[i-(n-k)];
+   }
+}
+int main(){
+    int n;
+    cout<<"Enter array size :";
+    cin>>n;
+    int k;
+    cout<<"Enter the places to be rotated :";
+    cin>>k;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>> arr[i];
+    }
+    //ROTATE ARRAY BY K PLACES
+    rotateArray(arr,k,n);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    } 
+    cout<<"<--Array printed "<<endl;
+    
+// Enter array size :6
+// Enter the places to be rotated :3
+// 1 2 3 4 5 6
+// 4 5 6 1 2 3 <--Array printed 
+    return 0;
+}
