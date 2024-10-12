@@ -1,0 +1,10 @@
+//OPTIMAL APPROACH
+// WE WILL DO XOR OF ALL THE ELEMENT 
+//IT WILL RETURN THE NUMBER WGICH IS SINGLE
+// AS A^A=0 AND 0^A=A
+int xor1 =0 ;
+	for(int i=0;i<arr.size();i++){
+
+		xor1 = xor1 ^ arr[i];
+	}
+	return xor1;
