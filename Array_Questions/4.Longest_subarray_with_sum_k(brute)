@@ -1,0 +1,47 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+void printArray(int arr[],int size){
+      for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    } 
+    cout<<"<--Array printed "<<endl;
+}
+int main() {
+    int size;
+    cout<<"Enter array size:";
+    cin>>size;
+    int arr[size];
+    int k;
+    cout<<"Enter sum value:";
+    cin>>k;
+    cout<<"Enter array values:";
+    for(int i=0;i<size;i++){
+        cin>> arr[i];
+    }
+    printArray(arr,size);
+    //LONGEST SUBARRAY WITH SUM K
+    // arr[]={1,2,3,1,1,1,1,4,3,2} suppose this is the array and sum we have find of subarray is 3 so the subarray with sum 3 : 1,2 or 1,1,1 or 3 or 3
+    //but max length subarray is 1 1 1 so we have to return length 3
+    //  GENERATE ALL THE SUBARRAYS
+    //EVALUATE SUM AND MATCH IT WITH K
+    // TAKE THE MAX LENGth
+    int len =0;
+    for(int i=0;i<size;i++){
+        int sum=0;
+        for(int j=i;j<size;j++){
+            sum+=arr[i];
+        
+        if(sum==k) {
+            len= max(len,j-i);
+        }
+        }
+    }
+    cout<<"ans :"<<len;
+//     Enter array size:7
+// Enter sum value:4
+// Enter array values:1 2 3 1 1 1 2
+// 1 2 3 1 1 1 2 <--Array printed 
+// ans :3
+return 0;
+}
