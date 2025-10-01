@@ -1,0 +1,59 @@
+//TLE PROBLEM 
+#include <bits/stdc++.h> 
+/****************************************************************
+
+    Following is the class structure of the Node class:
+
+        class Node
+        {
+        public:
+            int data;
+            Node *next;
+            Node *prev;
+            Node(int data)
+            {
+                this->data = data;
+                this->next = NULL;
+                this->prev = NULL;
+            }
+        };
+
+*****************************************************************/
+
+void deleteNode(Node * ( & head), int pos) {
+   
+    Node* knode =head;
+    int cnt=0;
+    while(knode!=NULL){
+        if(cnt ==pos) break;
+        cnt++;
+        knode= knode->next;
+    }
+    Node* before= knode->prev;
+    Node* front = knode->next;
+    if(before == NULL && front ==NULL){
+       delete head;
+    }
+    else if(before== NULL){
+        head= head->next;
+        before->next= nullptr;
+        head->prev=nullptr;
+        delete before;             
+      //  return NULL;
+    }
+  
+    
+   else if (front == NULL) {
+    before->next = NULL;
+    knode->prev = NULL;
+    delete knode;
+}
+    else{
+        before->next=front;
+        front->prev= before;
+        knode->next=NULL;
+        knode->prev= NULL;
+        delete knode;
+        //return head;
+    }
+}
